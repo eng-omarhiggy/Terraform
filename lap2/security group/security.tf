@@ -4,12 +4,12 @@ resource "aws_security_group" "securt_1" {
   vpc_id      = data.aws_vpc.main.id
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 443
-    to_port          = 443
-    protocol         = "tcp"
-    cidr_blocks      = [data.aws_vpc.main.cidr_block]
-    
+    description = "TLS from VPC"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = [data.aws_vpc.main.cidr_block]
+
   }
 
   egress {
