@@ -10,4 +10,5 @@ resource "aws_db_instance" "default" {
   password             = var.db_pass_word
   availability_zone    = each.value
   for_each             = var.az
+  skip_final_snapshot  = true 
 }
